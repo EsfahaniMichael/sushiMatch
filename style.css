@@ -57,40 +57,38 @@ header > * {
 .card > * {
     width: 80%;
     height: 80%;
-    background-color: pink;
+
     position: absolute;
     left: 10%;
     top: 5%;
 
 }
-#front1{
-    background-image: url("https://www.kblearningcenter.com/components/com_virtuemart/shop_image/product/full/841543_2_56f9785351d33.jpg");
+.front{
     background-size: 100% 100%;
     background-repeat:no-repeat;
+}
+#front1{
+    background-image: url("images/1.png");
+
+}
+#front2{
+    background-image: url("images/1.png");
+}
+#front3{
+    background-image: url("images/2.jpg");
+
+}
+#front4{
+    background-image: url("images/2.jpg");
 }
 .back {
-    background-image: url("https://public-media.smithsonianmag.com/filer/1e/72/1e725e16-2e8f-4e60-87ed-21786e750445/lorax-2_edited.jpg");
+    background-image: url("images/lorax-back.jpg");
     background-size: 100% 100%;
     background-repeat:no-repeat;
 
 
-
-
+}
+.hide .back {
+    display: none;
 }
 
-/*
-
- green eggs
-<img src="https://www.kblearningcenter.com/components/com_virtuemart/shop_image/product/full/841543_2_56f9785351d33.jpg">
-
-green ham
-http://www.seussville.com/images/activities/TN_GREEN_PinTheEggs_1.png
-
-
-
-
-
-
-
-
-*/
