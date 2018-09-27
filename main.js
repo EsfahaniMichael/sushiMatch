@@ -76,7 +76,7 @@ function reset_clicked(){
 }
 
 function display_stats(){
-    
+
 }
 
 
