@@ -1,18 +1,26 @@
 $(document).ready(initializeApp);
 
 
+
+
+var first_card_clicked = null;
+var second_card_clicked = null;
+var total_possible_matches = 2;
+var match_counter = 0;
+
+var matches = 0;
+var attempts = 0;
+var accuracy = 0;
+var games_played = 0;
+
 function initializeApp(){
     addClickHandler();
 }
 
 function addClickHandler(){
     $('.card').click(card_clicked);
+    $('.reset').click(reset_clicked);
 }
-var first_card_clicked = null;
-var second_card_clicked = null;
-var total_possible_matches = 2;
-var match_counter = 0;
-
 function card_clicked(){
 
    if (first_card_clicked === null){
@@ -20,6 +28,8 @@ function card_clicked(){
       addClassHide(first_card_clicked);
    }
    else{
+       attempts++;
+
        second_card_clicked = $(event.currentTarget);
         addClassHide(second_card_clicked);
 
@@ -27,6 +37,7 @@ function card_clicked(){
        second_card_clicked.find('.front').css('background-image')){
         console.log("HEYYY THEY ARE THE SAME!!");
         match_counter++;
+        matches++;
         first_card_clicked = null;
         second_card_clicked = null;
         console.log(match_counter);
@@ -42,6 +53,8 @@ function card_clicked(){
            setTimeout(removeClassHide, 2000);
            console.log("The pairs are not the same");
        }
+       accuracy = matches / attempts;
+       console.log(accuracy);
    }
 }
 
@@ -55,5 +68,16 @@ function removeClassHide(){
     first_card_clicked = null;
     second_card_clicked = null;
 }
+
+function reset_clicked(){
+    console.log("RESETCLICK!!");
+    games_played++;
+    console.log("games played: ", games_played);
+}
+
+function display_stats(){
+    
+}
+
 
 
