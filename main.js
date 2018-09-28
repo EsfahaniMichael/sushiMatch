@@ -18,55 +18,76 @@ function initializeApp(){
 }
 
 function addClickHandler(){
-    $('.card').click(card_clicked);
-    $('.reset').click(reset_clicked);
+    $('.card').on("click", card_clicked);
+    $('.reset').on("click", reset_clicked);
 }
 function card_clicked(){
 
    if (first_card_clicked === null){
-      first_card_clicked = $(event.currentTarget);
+      first_card_clicked = event.currentTarget;
       addClassHide(first_card_clicked);
    }
-   else{
-       attempts++;
+   else {
 
-       second_card_clicked = $(event.currentTarget);
-        addClassHide(second_card_clicked);
+       addClassHide(event.currentTarget);
+       if (event.currentTarget === first_card_clicked) {
 
-       if(first_card_clicked.find('.front').css('background-image') ==
-       second_card_clicked.find('.front').css('background-image')){
-        console.log("HEYYY THEY ARE THE SAME!!");
-        match_counter++;
-        matches++;
-        first_card_clicked = null;
-        second_card_clicked = null;
-        console.log(match_counter);
-        if(match_counter === total_possible_matches){
-            console.log("YOU HAVE WON!!!!!!!!!");
-        }
-        else{
-            console.log("Not enough points to win, YET")
-            return;
-        }
+           return;
        }
        else{
-           setTimeout(removeClassHide, 2000);
-           console.log("The pairs are not the same");
+
+            attempts++;
+            console.log("this is the attempts", attempts);
+            second_card_clicked = event.currentTarget;
+
+
+           if ($(first_card_clicked).find('.front').css('background-image') ===
+               $(second_card_clicked).find('.front').css('background-image'))
+           {
+               console.log("HEYYY THEY ARE THE SAME!!");
+               match_counter++;
+               matches++;
+               first_card_clicked = null;
+               second_card_clicked = null;
+
+               if (match_counter === total_possible_matches) {
+                   console.log("YOU HAVE WON!!!!!!!!!");
+               }
+               else {
+                   console.log("Not enough points to win, YET")
+                   return;
+               }
+           }
+           else {
+               doNotFlipCards();
+               setTimeout(removeClassHide, 2000);
+               setTimeout(reFlipCards, 3000);
+               console.log("The pairs are not the same");
+           }
+           accuracy = matches / attempts;
+           console.log(accuracy);
        }
-       accuracy = matches / attempts;
-       console.log(accuracy);
    }
 }
 
 function addClassHide(element){
-    element.addClass('hide');
+    $(element).addClass('hide');
 }
 
 function removeClassHide(){
-    first_card_clicked.removeClass('hide');
-    second_card_clicked.removeClass('hide');
+    $(first_card_clicked).removeClass('hide');
+    $(second_card_clicked).removeClass('hide');
     first_card_clicked = null;
     second_card_clicked = null;
+}
+
+function doNotFlipCards(){
+    console.log('WOOOOOWWWWW');
+    $('.card').off();
+}
+
+function reFlipCards(){
+   $('.card').on("click", card_clicked);
 }
 
 function reset_clicked(){
@@ -74,6 +95,8 @@ function reset_clicked(){
     games_played++;
     console.log("games played: ", games_played);
 }
+
+
 
 function display_stats(){
 
