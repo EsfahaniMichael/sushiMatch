@@ -67,19 +67,35 @@ header > * {
     background-size: 100% 100%;
     background-repeat:no-repeat;
 }
-#front1{
+.front1{
     background-image: url("images/1.png");
 
 }
-#front2{
-    background-image: url("images/1.png");
-}
-#front3{
+.front2{
     background-image: url("images/2.jpg");
 
 }
-#front4{
-    background-image: url("images/2.jpg");
+.front3{
+    background-image: url("images/3.jpg");
+
+}
+.front4{
+    background-image: url("images/4.jpg");
+}
+.front5{
+    background-image: url("images/5.jpg");
+}
+.front6{
+    background-image: url("images/6.jpeg");
+}
+.front7{
+    background-image: url("images/7.jpg");
+}
+.front8{
+    background-image: url("images/8.png");
+}
+.front9{
+    background-image: url("images/9.jpg");
 }
 .back {
     background-image: url("images/lorax-back.jpg");

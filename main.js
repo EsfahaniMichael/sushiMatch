@@ -44,6 +44,8 @@ function card_clicked(){
            if ($(first_card_clicked).find('.front').css('background-image') ===
                $(second_card_clicked).find('.front').css('background-image'))
            {
+               $(first_card_clicked).off();
+               $(second_card_clicked).off();
                console.log("HEYYY THEY ARE THE SAME!!");
                match_counter++;
                matches++;
