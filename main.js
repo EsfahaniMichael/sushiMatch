@@ -106,6 +106,11 @@ function reset_clicked(){
     console.log("games played: ", games_played);
     reset_stats();
     display_stats();
+    $('.card').removeClass('hide cantClick');
+    $('.card').on("click", card_clicked);
+    first_card_clicked = null;
+    second_card_clicked = null;
+
 }
 
 
@@ -124,6 +129,7 @@ function reset_stats(){
     matches = 0;
     attempts = 0;
     display_stats();
+
 
 }
 
