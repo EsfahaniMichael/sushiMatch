@@ -4,7 +4,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: url("https://i.pinimg.com/originals/45/9b/97/459b973efcab8baf8354fc067740dc53.jpg");
+    background-image: url("https://i.pinimg.com/originals/45/9b/97/459b973efcab8baf8354fc067740dc53.jpg") ;
 
 }
 
@@ -35,6 +35,7 @@ header > * {
 
     margin: 0;
     vertical-align: top;
+    text-align: center;
 }
 .game-area{
     width: 80%;
