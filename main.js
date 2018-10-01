@@ -12,7 +12,39 @@ var accuracy = 0;
 var games_played = 0;
 
 
+function makeCardArray(){
+    var classList = [];
+    for(var classCounter = 1; classCounter<10; classCounter++){
+        classList.push( 'front'+classCounter);
+    }
+    classList = classList.concat(classList);
+    var secondClassList = [];
+
+    while (classList.length > 0){
+        var addingIntoSecondClassList = classList.splice(Math.floor(Math.random() * classList.length),1);
+        secondClassList.push(addingIntoSecondClassList);
+    }
+    createCards(secondClassList);
+}
+
+function createCards(secondClassList){
+
+        for (var ccIndex = 0; ccIndex < 18; ccIndex++) {
+            var cardBig = $('<div>').addClass('card');
+            var frontCard = $('<div>').addClass('front ' + secondClassList[ccIndex] + '');
+            console.log(secondClassList[ccIndex]);
+            var backCard = $('<div>').addClass('back');
+            cardBig.append(frontCard);
+            cardBig.append(backCard);
+            $('.game-area').append(cardBig);
+        }
+
+
+}
+
+
 function initializeApp(){
+    makeCardArray();
     addClickHandler();
 }
 
@@ -106,7 +138,8 @@ function reset_clicked(){
     console.log("games played: ", games_played);
     reset_stats();
     display_stats();
-    $('.card').removeClass('hide cantClick');
+    $('.card').remove();
+    makeCardArray();
     $('.card').on("click", card_clicked);
     first_card_clicked = null;
     second_card_clicked = null;
@@ -132,6 +165,8 @@ function reset_stats(){
 
 
 }
+
+
 
 
 
