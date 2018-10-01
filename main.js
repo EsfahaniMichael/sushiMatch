@@ -68,8 +68,6 @@ if($(event.currentTarget).hasClass('cantClick')){
             attempts++;
             $('.attempts .value').text(attempts);
             second_card_clicked = event.currentTarget;
-
-
            if ($(first_card_clicked).find('.front').css('background-image') ===
                $(second_card_clicked).find('.front').css('background-image'))
            {

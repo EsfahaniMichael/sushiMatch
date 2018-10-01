@@ -4,7 +4,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: url("https://i.pinimg.com/originals/45/9b/97/459b973efcab8baf8354fc067740dc53.jpg") ;
+    background-image: url("images/forrest.jpg") ;
 
 }
 
@@ -16,6 +16,24 @@ header {
 }
 header > * {
     display: inline-block;
+    position: relative;
+    left: 40%;
+}
+#headerPart1{
+    left: 5%;
+    background-image: url("images/differentlogo.png");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    width: 20%;
+    height: 80%;
+}
+#headerPart2{
+
+    left: 30%;
+}
+#headerPart3{
+
+    left: 50%;
 }
 .container1 {
     width: 100%;
