@@ -38,8 +38,6 @@ function createCards(secondClassList){
             cardBig.append(backCard);
             $('.game-area').append(cardBig);
         }
-
-
 }
 
 
@@ -67,10 +65,8 @@ if($(event.currentTarget).hasClass('cantClick')){
            return;
        }
        else{
-
             attempts++;
             $('.attempts .value').text(attempts);
-            console.log("this is the attempts", attempts);
             second_card_clicked = event.currentTarget;
 
 
@@ -79,18 +75,15 @@ if($(event.currentTarget).hasClass('cantClick')){
            {
                $(first_card_clicked).off("click", card_clicked);
                $(second_card_clicked).off("click", card_clicked);
-               console.log("HEYYY THEY ARE THE SAME!!");
                matches++;
                first_card_clicked = null;
                second_card_clicked = null;
                accuracy = matches / attempts;
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
-               console.log(accuracy);
                if (matches === total_possible_matches) {
                    console.log("YOU HAVE WON!!!!!!!!!");
                }
                else {
-                   console.log("Not enough points to win, YET")
                    return;
                }
 
@@ -98,15 +91,11 @@ if($(event.currentTarget).hasClass('cantClick')){
            else {
                accuracy = matches / attempts;
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
-               console.log(accuracy);
                doNotFlipCards();
-               setTimeout(removeClassHide, 1500);
-              setTimeout(reFlipCards, 2000);
-               console.log("The pairs are not the same");
+               setTimeout(removeClassHide, 1000);
+              setTimeout(reFlipCards, 1300);
+
            }
-          /* accuracy = matches / attempts;
-           $('.accuracy .value').text(accuracy.toFixed(2) * 100 + "%");
-           console.log(accuracy);*/
        }
    }
 
@@ -124,7 +113,6 @@ function removeClassHide(){
 }
 
 function doNotFlipCards(){
-    console.log('WOOOOOWWWWW');
     $('.card').off("click", card_clicked);
 }
 
@@ -133,9 +121,7 @@ function reFlipCards(){
 }
 
 function reset_clicked(){
-    console.log("RESETCLICK!!");
     games_played++;
-    console.log("games played: ", games_played);
     reset_stats();
     display_stats();
     $('.card').remove();
@@ -162,8 +148,6 @@ function reset_stats(){
     matches = 0;
     attempts = 0;
     display_stats();
-
-
 }
 
 
