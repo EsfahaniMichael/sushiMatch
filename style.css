@@ -4,7 +4,12 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: url("images/forrest.jpg") ;
+    background-image: url("images/blue-background.jpg") ; 
+    background-size: 100% 100%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    
 
 }
 
@@ -19,14 +24,7 @@ header > * {
     position: relative;
     left: 40%;
 }
-#headerPart1{
-    left: 5%;
-    background-image: url("images/differentlogo.png");
-    background-size: 100% 100%;
-    background-repeat:no-repeat;
-    width: 20%;
-    height: 80%;
-}
+
 #headerPart2{
 
     left: 30%;
