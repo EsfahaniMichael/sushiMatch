@@ -1,8 +1,5 @@
 $(document).ready(initializeApp);
 
-
-
-
 var first_card_clicked = null;
 var second_card_clicked = null;
 var total_possible_matches = 9;
@@ -10,7 +7,6 @@ var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
-
 
 function makeCardArray(){
     var classList = [];
@@ -30,16 +26,16 @@ function makeCardArray(){
 function createCards(secondClassList){
 
         for (var ccIndex = 0; ccIndex < 18; ccIndex++) {
+            var biggerCard = $('<div>').addClass('largerCard');
             var cardBig = $('<div>').addClass('card');
-            var frontCard = $('<div>').addClass('front ' + secondClassList[ccIndex] + '');
-            console.log(secondClassList[ccIndex]);
+            var frontCard = $('<div>').addClass('front ' + secondClassList[ccIndex] + '');           
             var backCard = $('<div>').addClass('back');
             cardBig.append(frontCard);
             cardBig.append(backCard);
-            $('.game-area').append(cardBig);
+            biggerCard.append(cardBig)
+            $('.game-area').append(biggerCard);
         }
 }
-
 
 function initializeApp(){
     makeCardArray();
@@ -100,7 +96,8 @@ if($(event.currentTarget).hasClass('cantClick')){
 }
 
 function addClassHide(element){
-    $(element).addClass('hide cantClick');
+    // $(element).addClass(' hide cantClick');
+    $(element).classList('hover');
 }
 
 function removeClassHide(){
@@ -129,8 +126,6 @@ function reset_clicked(){
     second_card_clicked = null;
 
 }
-
-
 
 function display_stats(){
 var gamesValue = $('.games-played .value');

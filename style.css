@@ -61,28 +61,37 @@ header > * {
     font-size: 0;
 
 }
+.largerCard{
+    perspective: 1000px; 
+}
+.largerCard.hover .flipper {
+    transform: rotateY(180deg);
+  }
+    
+
 .card {
-    width: 15%;
-    height: 30%;
 
     position: relative;
     display: inline-block;
     margin: 0;
-
-
+    transition: 0.6s;
+    transform-style: preserve-3d;
 }
-.card > * {
-    width: 80%;
-    height: 80%;
-
+.card, .front, .back {
+    width: 320px;
+    height: 480px;
+}
+.front, .back {
+    backface-visibility: hidden;
     position: absolute;
-    left: 10%;
-    top: 5%;
-
+    top: 0;
+    left: 0;
 }
 .front{
     background-size: 100% 100%;
     background-repeat:no-repeat;
+    z-index: 2;
+    transform: rotateY(0deg);
 }
 .front1{
     background-image: url("images/1.png");
@@ -118,10 +127,11 @@ header > * {
     background-image: url("images/lorax-back.jpg");
     background-size: 100% 100%;
     background-repeat:no-repeat;
+    transform: rotateY(180deg);
 
 
 }
-.hide .back {
+/* .hide .back {
     display: none;
-}
+} */
 
