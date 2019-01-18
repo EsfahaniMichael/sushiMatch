@@ -31,8 +31,7 @@ function createCards(secondClassList){
 
         for (var ccIndex = 0; ccIndex < 18; ccIndex++) {
             var cardBig = $('<div>').addClass('card');
-            var frontCard = $('<div>').addClass('front ' + secondClassList[ccIndex] + '');
-            console.log(secondClassList[ccIndex]);
+            var frontCard = $('<div>').addClass('front ' + secondClassList[ccIndex] + '');           
             var backCard = $('<div>').addClass('back');
             cardBig.append(frontCard);
             cardBig.append(backCard);
@@ -44,6 +43,12 @@ function createCards(secondClassList){
 function initializeApp(){
     makeCardArray();
     addClickHandler();
+    makeModal()
+
+}
+
+function makeModal(){
+    var modalWin = $('div').addClass('modalWin modalOff');
 }
 
 function addClickHandler(){
@@ -79,7 +84,7 @@ if($(event.currentTarget).hasClass('cantClick')){
                accuracy = matches / attempts;
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
                if (matches === total_possible_matches) {
-                   console.log("YOU HAVE WON!!!!!!!!!");
+                   $('.modalWin').addClass('modalOn');
                }
                else {
                    return;
@@ -127,6 +132,7 @@ function reset_clicked(){
     $('.card').on("click", card_clicked);
     first_card_clicked = null;
     second_card_clicked = null;
+    $('modalWin').removeClass('modalOn');
 
 }
 

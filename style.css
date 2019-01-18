@@ -142,3 +142,13 @@ header {
     display: none;
 }
 
+
+.modalWin{
+    
+}
+.modalOff{
+    display:none;
+}
+.modalOn{
+    display:block;
+}
