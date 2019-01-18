@@ -144,7 +144,11 @@ header {
 
 
 .modalWin{
-    
+    position:absolute;
+    background:url(tint20.png) 0 0 repeat;
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
 }
 .modalOff{
     display:none;

@@ -43,7 +43,7 @@ function createCards(secondClassList){
 function initializeApp(){
     makeCardArray();
     addClickHandler();
-    makeModal()
+    makeModal();
 
 }
 
