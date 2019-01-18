@@ -36,12 +36,48 @@ header {
     vertical-align: top;
     text-align: center;
 }
+.statsContainer > *{
+    display: inline-block;
+}
+.games-played{
+    position: relative;
+    right: 20%;
+    top: 30%;
+}
+.accuracy{
+    position: relative;
+    left: 20%;
+    top: 30%;
+}
+.attempts{
+    position: relative;
+    top: 30%;
+}
+.attempts > *{
+    display: inline-block;
+}
+.accuracy > * {
+    display: inline-block;
+}
+.games-played > *{
+    display: inline-block;
+}
+
 .game-area{
     width: 80%;
-    height: 100%;
+    height: 80%;
     margin: 0;
     font-size: 0;
+    display: inline-block;
+    position: relative;
+    left: 10%;
 
+}
+.reset{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    left: 5%;
 }
 .card {
     width: 15%;
