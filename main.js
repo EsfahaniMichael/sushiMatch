@@ -43,13 +43,10 @@ function createCards(secondClassList){
 function initializeApp(){
     makeCardArray();
     addClickHandler();
-    makeModal();
+    
 
 }
 
-function makeModal(){
-    var modalWin = $('div').addClass('modalWin modalOff');
-}
 
 function addClickHandler(){
     $('.card').on("click", card_clicked);
@@ -84,7 +81,7 @@ if($(event.currentTarget).hasClass('cantClick')){
                accuracy = matches / attempts;
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
                if (matches === total_possible_matches) {
-                   $('.modalWin').addClass('modalOn');
+                $("#winModal").modal("show");
                }
                else {
                    return;
@@ -103,6 +100,8 @@ if($(event.currentTarget).hasClass('cantClick')){
    }
 
 }
+
+
 
 function addClassHide(element){
     $(element).addClass('hide cantClick');
@@ -132,7 +131,7 @@ function reset_clicked(){
     $('.card').on("click", card_clicked);
     first_card_clicked = null;
     second_card_clicked = null;
-    $('modalWin').removeClass('modalOn');
+    // $('modalWin').removeClass('modalOn');
 
 }
 
