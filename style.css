@@ -143,7 +143,7 @@ header {
 }
 
 
-#modal{
+#winModal{
     position:absolute;
     background:url(./images/modal_Win_img.jpg) 0 0 repeat;
     background:rgba(0,0,0,0.2);
@@ -158,7 +158,7 @@ header {
     display:block;
 }
 
-#overlay {
+.winnerContainer {
     position: fixed; 
     top: 0;
     left: 0;
