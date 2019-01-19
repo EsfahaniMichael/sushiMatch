@@ -142,3 +142,35 @@ header {
     display: none;
 }
 
+
+#modal{
+    position:absolute;
+    background:url(./images/modal_Win_img.jpg) 0 0 repeat;
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
+    z-index: 1;
+}
+.modalOff{
+    display:none;
+}
+.modalOn{
+    display:block;
+}
+
+#overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #content {
+    border-radius:8px;
+    background:#fff;
+    padding:20px;
+  }
