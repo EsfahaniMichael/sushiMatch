@@ -43,7 +43,7 @@ function createCards(secondClassList){
 function initializeApp(){
     makeCardArray();
     addClickHandler();
-    
+    $('.winnerContainer').hide();
 
 }
 
@@ -82,6 +82,7 @@ if($(event.currentTarget).hasClass('cantClick')){
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
                if (matches === total_possible_matches) {
                 $("#winModal").modal("show");
+                return;
                }
                else {
                    return;
