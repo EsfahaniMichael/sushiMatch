@@ -141,36 +141,58 @@ header {
 .hide .back {
     display: none;
 }
+.helloThere{
+    
+}
 
-
-#winModal{
+.win-modal{
     position: absolute;
-    background-image: url(./images/modal_Win_img.jpg);
+    top: 10%;
+    left: 20%;
+    height: 80%;
+    width: 80%;
+    z-index: 7;
+    opacity: 1;
+    text-align: center;
+}
+.displaynone{
+    display: none;
+}
+.trophy{
+    position: absolute;
+    height: 70%;
+    left: 8%;
+    width: 60%;
+    bottom: 21%;
+    background-image: url(images/modal_Win_img.jpg);
     background-repeat: no-repeat;
-    border-radius: 14px;
-    padding: 8px;
-    z-index: 1;
+    background-position: center;
+    background-size: contain;
 }
-.modalOff{
-    display:none;
+.win-modal > h1 {
+    position: absolute;
+    color: whitesmoke;
+    font-family: 'Righteous';
+    bottom: 5%;
+    left: 40%;
+    transform: translateX(-50%);
+    letter-spacing: 20px;
+    font-size: 5vmin;
 }
-.modalOn{
-    display:block;
+.hidden {
+    opacity: 0;
+    animation: .6s fadeout linear 0s 1;
+    z-index: -1;
+}.hidden2 {
+    opacity: 0;
+    animation: .6s fadeout2 linear 0s 1;
+    z-index: -1;
 }
-
-.winnerContainer {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.5; 
-    filter: alpha(opacity=50);
-  }
-
-  #content {
-    border-radius:8px;
-    background:#fff;
-    padding:20px;
-  }
+.show {
+    opacity: 1;
+    animation: .6s fadein linear 0s 1;
+}
+.show2 {
+    opacity: .8;
+    animation: .6s fadein2 linear 0s 1;
+}
