@@ -145,10 +145,10 @@ header {
 
 .win-modal{
     position: absolute;
-    top: 10%;
-    left: 20%;
-    height: 80%;
-    width: 80%;
+    top: 20%;
+    left: 33%;
+    height: 70%;
+    width: 38%;
     z-index: 7;
     opacity: 1;
     text-align: center;
@@ -157,10 +157,8 @@ header {
     display: none;
 }
 .trophy{
-    position: absolute;
-    height: 70%;
-    left: 8%;
-    width: 60%;
+    height: 100%;
+    width: 100%;
     bottom: 21%;
     background-image: url(images/modal_Win_img.jpg);
     background-repeat: no-repeat;
@@ -169,13 +167,11 @@ header {
 }
 .win-modal > h1 {
     position: absolute;
-    color: whitesmoke;
-    font-family: 'Righteous';
-    bottom: 5%;
-    left: 40%;
+    font-family: fantasy;
+    bottom: 35%;
+    left: 47%;
     transform: translateX(-50%);
-    letter-spacing: 20px;
-    font-size: 5vmin;
+    background-size: contain;
 }
 .hidden {
     opacity: 0;
