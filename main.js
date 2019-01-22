@@ -51,6 +51,7 @@ function initializeApp(){
 function addClickHandler(){
     $('.card').on("click", card_clicked);
     $('.reset').on("click", reset_clicked);
+    $(".playagain").on('click', playAgain);
 }
 function card_clicked(){
 if($(event.currentTarget).hasClass('cantClick')){
@@ -81,7 +82,8 @@ if($(event.currentTarget).hasClass('cantClick')){
                accuracy = matches / attempts;
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
                if (matches === total_possible_matches) {
-                $("#winModal").modal("show");
+                $('.win-modal > h1').text("Congratulations! You have won. It only took you " + attempts + "tries!")
+                showWinModal();
                 return;
                }
                else {
@@ -132,7 +134,7 @@ function reset_clicked(){
     $('.card').on("click", card_clicked);
     first_card_clicked = null;
     second_card_clicked = null;
-    // $('modalWin').removeClass('modalOn');
+    hideWinModal();
 
 }
 
@@ -153,6 +155,21 @@ function reset_stats(){
     attempts = 0;
     display_stats();
 }
+
+function hideWinModal(){
+    $('.win-modal').removeClass('show');
+    $('.modal-background').removeClass('show2');
+    $('.modal-background').addClass('hidden2');
+    $('.win-modal').addClass('hidden');
+}
+
+function showWinModal(){
+    $('.modal-background').removeClass('hidden2 displaynone');
+    $('.win-modal').removeClass('hidden displaynone')
+    $('.modal-background').addClass('show2');
+    $('.win-modal').addClass('show');
+}
+
 
 
 
