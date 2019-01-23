@@ -192,25 +192,58 @@ header {
     animation: .6s fadein2 linear 0s 1;
 }
 
-@media (min-width: 375px){
-    .win-modal {
+@media screen and (max-width: 800px) and (min-width: 300px){
+    .win-modal > h1 {
         position: absolute;
-        top: 20%;
-        left: 33%;
-        height: 70%;
-        width: 54%;
+        font-family: fantasy;
+        bottom: 37%;
+        left: 47%;
+        transform: translateX(-50%);
+        background-size: contain;
+        font-size: 1.2rem;
     }
    .trophy{
     bottom: 21%;   
     }
     .win-modal > h1 {
         position: absolute;
-        font-family: fantasy;
-        bottom: 46%;
-        left: 47%;
-        transform: translateX(-50%);
-        background-size: contain;
-        font-size: 23px;
+        top: 20%;
+        left: 36%;
+        height: 69%;
+        width: 47%;
     }
 }
 
+@media screen and (max-width: 1000px) and (min-width: 800px){
+    .win-modal > h1 {
+        position: absolute;
+        font-family: fantasy;
+        bottom: 43%;
+        left: 47%;
+        transform: translateX(-50%);
+        background-size: contain;
+        font-size: 1.5rem;
+    }
+    .win-modal {
+        position: absolute;
+        top: 20%;
+        left: 31%;
+        height: 73%;
+        width: 44%;
+        z-index: 7;
+        opacity: 1;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px){
+    .win-modal > h1 {
+        position: absolute;
+        font-family: fantasy;
+        bottom: 40%;
+        left: 47%;
+        transform: translateX(-50%);
+        background-size: contain;
+        font-size: 1.7rem;
+    }
+}
