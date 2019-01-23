@@ -192,26 +192,20 @@ header {
     animation: .6s fadein2 linear 0s 1;
 }
 
-@media screen and (max-width: 800px) and (min-width: 300px){
+@media screen and (max-width: 800px) and (min-width: 550px){
     .win-modal > h1 {
         position: absolute;
         font-family: fantasy;
-        bottom: 37%;
+        bottom: 35%;
         left: 47%;
         transform: translateX(-50%);
         background-size: contain;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
    .trophy{
     bottom: 21%;   
     }
-    .win-modal > h1 {
-        position: absolute;
-        top: 20%;
-        left: 36%;
-        height: 69%;
-        width: 47%;
-    }
+    
 }
 
 @media screen and (max-width: 1000px) and (min-width: 800px){
