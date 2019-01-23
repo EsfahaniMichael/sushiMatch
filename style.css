@@ -172,6 +172,7 @@ header {
     left: 47%;
     transform: translateX(-50%);
     background-size: contain;
+    font-size: 24px;
 }
 .hidden {
     opacity: 0;
@@ -190,3 +191,39 @@ header {
     opacity: .8;
     animation: .6s fadein2 linear 0s 1;
 }
+
+
+@media only screen and (min-width: 768px){
+    .win-modal > h1{
+        font-size: 24px;
+    }
+} 
+@media only screen and (min-width: 600px){
+    .win-modal > h1{
+        position: absolute;
+        font-family: fantasy;
+        bottom: 48%;
+        left: 44%;
+        transform: translateX(-50%);
+        background-size: contain;
+        font-size: 36px;
+    }
+    .trophy {
+        height: 100%;
+        width: 100%;
+        bottom: 21%;
+        background-image: url(images/modal_Win_img.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .win-modal {
+        position: absolute;
+        top: 20%;
+        left: 24%;
+        height: 70%;
+        width: 60%;
+        z-index: 7;
+        opacity: 1;
+        text-align: center;
+    }
+} 
