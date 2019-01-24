@@ -192,7 +192,27 @@ header {
     animation: .6s fadein2 linear 0s 1;
 }
 
-@media screen and (max-width: 550px) {
+@media (min-width: 200px) and (max-width: 550px) {
+    .statsContainer > * {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    header {
+        height: 10%;
+    }
+    .divAboveRow{
+        height:80%;
+    }
+    .game-area {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        font-size: 0;
+        display: inline-block;
+        position: relative;
+        left: 20%;
+    }
     body {
         background-repeat: repeat;
         background-size: auto;
@@ -200,24 +220,46 @@ header {
     }
     .win-modal {
         position: absolute;
-        top: 20%;
-        left: 36%;
-        height: 70%;
-        width: 44%;
-
+        top: 5%;
+        left: 18%;
+        height: 100%;
+        width: 64%;
     }
+
     .win-modal > h1 {
         position: absolute;
         font-family: fantasy;
-        bottom: 35%;
+        bottom: 43%;
         left: 47%;
         transform: translateX(-50%);
         background-size: contain;
         font-size: .9rem;
     }
+    .card {
+        width: 26%;
+        height: 17%;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+    }
 }
 
-@media screen and (max-width: 800px) and (min-width: 550px){
+@media (max-width: 800px) and (min-width: 550px){
+    .header{
+        height: 15%;
+    }
+    .divAboveRow{
+        height:80%;
+    }
+    .game-area {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        font-size: 0;
+        display: inline-block;
+        position: relative;
+        left: 20%;
+    }
     body {
         background-repeat: repeat;
         background-size: auto;
@@ -235,10 +277,21 @@ header {
    .trophy{
     bottom: 21%;   
     }
+    .card {
+        width: 26%;
+        height: 17%;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+    }
     
 }
 
-@media screen and (max-width: 1000px) and (min-width: 800px){
+@media (min-width: 750px) and (max-width: 1000px) {
+    body {
+        background-repeat: repeat;
+        background-size: auto;
+    }
     .win-modal > h1 {
         position: absolute;
         font-family: fantasy;
@@ -258,9 +311,20 @@ header {
         opacity: 1;
         text-align: center;
     }
+    .card {
+        width: 26%;
+        height: 17%;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+    }
 }
 
-@media screen and (max-width: 1200px) and (min-width: 1000px){
+@media screen and (min-width: 1000px) and (max-width: 1200px)  {
+    body {
+        background-repeat: repeat;
+        background-size: auto;
+    }
     .win-modal > h1 {
         position: absolute;
         font-family: fantasy;
@@ -269,5 +333,21 @@ header {
         transform: translateX(-50%);
         background-size: contain;
         font-size: 1.7rem;
+    }
+    .game-area {
+        width: 80%;
+        height: 53%;
+        margin: 0;
+        font-size: 0;
+        display: inline-block;
+        position: relative;
+        left: 10%;
+    }
+    .card {
+        width: 26%;
+        height: 24%;
+        position: relative;
+        display: inline-block;
+        margin: 0;
     }
 }
