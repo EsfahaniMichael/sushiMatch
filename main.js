@@ -50,7 +50,8 @@ function initializeApp(){
 
 function addClickHandler(){
     $('.card').on("click", card_clicked);
-    $('.reset').on("click", reset_clicked);
+    $('.resetButton').on("click", reset_clicked);
+    $('.playAgain').on("click", reset_clicked);
     // $(".playagain").on('click', playAgain);
 }
 function card_clicked(){

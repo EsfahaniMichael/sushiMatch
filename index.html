@@ -3,22 +3,25 @@
     <head>
         <title>Memory Match</title>
 
-        <link rel="stylesheet" href="style.css">
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">      
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
         <script src="main.js">
         </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     </head>
     <body>
             <div class = 'modal-background displaynone'></div>
             <div class="win-modal displaynone">
-                    <div class="trophy"></div>
-                    <h1>You Have Won!</h1>
-                    <div class="playagain"></div>
+                    <div class="trophy">
+                            <div class="modalTextWinning">You Have Won!</div>
+                            <div class="playAgain">Play Again?</div>
+                    </div>
+                    
+                    
             </div>
             
         <header>
@@ -54,11 +57,11 @@
         </header>
      <div class="container divAboveRow">
         <div class="row">
-            <button class="reset col-lg-3">
-                Reset Game
-            </button>
-            
-
+            <div class="reset col-lg-3">
+                <div class="resetButton">
+                            Reset Game
+                </div>
+            </div>
             <div class="game-area col-lg-9">
 
             </div> 
