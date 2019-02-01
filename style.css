@@ -63,21 +63,29 @@ header {
     display: inline-block;
 }
 
-.game-area{
-    width: 80%;
+.game-area {
+    width: 79%;
     height: 80%;
     margin: 0;
     font-size: 0;
     display: inline-block;
-    position: relative;
-    left: 10%;
-
 }
-.reset{
+.reset {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    left: 5%;
+    width: 20%;
+    max-width: 210px;
+}
+.reset > div {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    border: 1px black solid;
+    margin: 4%;
+    border-radius: 4px;
+    background-color: aliceblue;
 }
 .card {
     width: 15%;
@@ -143,37 +151,44 @@ header {
 }
 
 
-.win-modal{
+.win-modal {
     position: absolute;
-    top: 20%;
-    left: 33%;
-    height: 70%;
-    width: 38%;
+    /* top: 6%; */
+    /* left: 33%; */
+    height: 100%;
+    width: 100%;
     z-index: 7;
     opacity: 1;
-    text-align: center;
+    /* text-align: center; */
+    /* text-align: center; */
+    /* margin: auto; */
+    /* justify-content: center; */
 }
 .displaynone{
     display: none;
 }
-.trophy{
-    height: 100%;
+.trophy {
+    height: 52%;
     width: 100%;
-    bottom: 21%;
     background-image: url(images/modal_Win_img.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin: auto;
+    margin-top: 14%;
 }
-.win-modal > h1 {
-    position: absolute;
-    font-family: fantasy;
-    bottom: 33%;
-    left: 47%;
-    transform: translateX(-50%);
-    background-size: contain;
-    font-size: 25px;
+.modalTextWinning {
+    text-align: center;
+    padding-top: 11%;
+    padding-bottom: 6%;
+    font-size: 2rem;
 }
+.playAgain{
+    text-align: center;
+    padding: 0%;
+    font-size: 2rem;
+}
+
 .hidden {
     opacity: 0;
     animation: .6s fadeout linear 0s 1;
@@ -192,7 +207,68 @@ header {
     animation: .6s fadein2 linear 0s 1;
 }
 
-@media (min-width: 200px) and (max-width: 550px) {
+@media screen and (orientation: portrait){
+    .statsContainer > * {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    header {
+        height: 10%;
+    }
+    .divAboveRow{
+        height:80%;
+    }
+    .game-area {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        font-size: 0;
+        display: inline-block;
+        position: relative;
+        left: 20%;
+    }
+    body {
+        background-repeat: repeat;
+        background-size: auto;
+
+    }
+    .win-modal {
+        position: absolute;
+        /* top: 5%; */
+        /* left: 18%; */
+        height: 100%;
+        width: 100%;
+    }
+    .trophy {
+        height: 23%;
+        width: 100%;
+        background-image: url(images/modal_Win_img.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin: auto;
+        margin-top: 68%;
+    }
+    .modalTextWinning {
+        text-align: center;
+        padding: 18%;
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 26%;
+        height: 17%;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+
+
+
+/* @media (min-width: 200px) and (max-width: 550px) {
     .statsContainer > * {
         position: relative;
         left: 0;
@@ -350,4 +426,4 @@ header {
         display: inline-block;
         margin: 0;
     }
-}
+} */
