@@ -33,32 +33,39 @@ header {
     vertical-align: top;
     text-align: center;
     background-color: lightgrey;
+    display:flex;
+    font-family: 'Teko', sans-serif;
+    color: black;
 }
 .statsContainer > *{
     display: inline-block;
 }
 .games-played{
-    position: relative;
-    right: 20%;
-    top: 30%;
+    flex:auto;
 }
 .accuracy{
-    position: relative;
-    left: 20%;
-    top: 30%;
+    flex:auto;
 }
 .attempts{
-    position: relative;
-    top: 30%;
+    flex:auto;
+}
+.label{
+    color:black;
 }
 .attempts > *{
     display: inline-block;
+    font-size: 2.3rem;
+    margin-top: 5%;
 }
 .accuracy > * {
     display: inline-block;
+    font-size: 2.3rem;
+    margin-top: 5%;
 }
 .games-played > *{
     display: inline-block;
+    font-size: 2.3rem;
+    margin-top: 5%;
 }
 
 .game-area {
@@ -71,8 +78,9 @@ header {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    
-}
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+}   
 .reset > div {
     position: relative;
     width: 100%;
@@ -144,6 +152,30 @@ header {
     background-color: #ccc;
     background-position-y: center;
 }
+.back:hover{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
  .hideCard .back {
     display: none;
 } 
@@ -200,14 +232,16 @@ header {
     text-align: center;
     /* padding-top: 27%; */
     /* padding-bottom: 6%; */
-    font-size: 2.5rem;
+    font-size: 3rem;
     /* vertical-align: middle; */
     /* vertical-align: middle; */
     /* display: table-cell; */
     margin: auto;
+    font-family: 'Teko', sans-serif;
 }
 .playAgain{
     border: solid 2px black;
+    background-color: lightgray;
 }
 
 .hidden {
