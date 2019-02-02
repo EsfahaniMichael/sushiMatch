@@ -4,10 +4,10 @@
 body {
     /* width: 100vw; */
     /* height: 100vh; */
-    background-image: url(images/sushiBackground.png);
-    background-size: 100% 100%;
+    background-image: url(images/japan_background.png);
+    /* background-size: 100% 100%; */
     background-position: center;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 
 header {
@@ -25,13 +25,14 @@ header {
     display: inline-block;
 }
 
-.statsContainer{
-    display:inline-block;
+.statsContainer {
+    display: inline-block;
     width: 100%;
-    height: 20%;
+    height: 74%;
     margin: 0;
     vertical-align: top;
     text-align: center;
+    background-color: lightgrey;
 }
 .statsContainer > *{
     display: inline-block;
@@ -101,9 +102,10 @@ header {
 .front {
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: cadetblue;
+    background-color: #ccc;
     background-position-y: center;
     background-size: contain;
+    box-shadow: 5px 10px 10px #888888;
 }
 .front1{
     background-image: url("images/sushi1.png");
@@ -136,10 +138,10 @@ header {
     background-image: url("images/sushi9.png");
 }
 .back {
-    background-image: url(images/drSeussLogo.png);
+    background-image: url(images/chopsticks.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: #54c5c5;
+    background-color: #ccc;
     background-position-y: center;
 }
  .hideCard .back {
