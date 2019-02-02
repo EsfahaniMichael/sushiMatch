@@ -77,13 +77,15 @@ if($(event.currentTarget).hasClass('cantClick')){
            {
                $(first_card_clicked).off("click", card_clicked);
                $(second_card_clicked).off("click", card_clicked);
+               $(first_card_clicked).find('.front').addClass("hidingCard");
+               $(second_card_clicked).find('.front').addClass("hidingCard");
                matches++;
                first_card_clicked = null;
                second_card_clicked = null;
+
                accuracy = matches / attempts;
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
                if (matches === total_possible_matches) {
-                $('.win-modal > h1').text("Congratulations! You have won. It only took you " + attempts + "tries!")
                 showWinModal();
                 return;
                }
@@ -108,12 +110,16 @@ if($(event.currentTarget).hasClass('cantClick')){
 
 
 function addClassHide(element){
-    $(element).addClass('hide cantClick');
+    $(element).addClass('hideCard cantClick');
+}
+
+function hideFullCard(e){
+    $(e).addClass('hideCard');
 }
 
 function removeClassHide(){
-    $(first_card_clicked).removeClass('hide cantClick');
-    $(second_card_clicked).removeClass('hide cantClick');
+    $(first_card_clicked).removeClass('hideCard cantClick');
+    $(second_card_clicked).removeClass('hideCard cantClick');
     first_card_clicked = null;
     second_card_clicked = null;
 }

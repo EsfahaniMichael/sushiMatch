@@ -1,16 +1,13 @@
 * {
     margin: 0;
 }
-body{
-    width: 100vw;
-    height: 100vh;
-    background-image: url("images/blue-background.jpg") ; 
+body {
+    /* width: 100vw; */
+    /* height: 100vh; */
+    background-image: url(images/sushiBackground.png);
     background-size: 100% 100%;
-    background-position: center; 
-    background-repeat: no-repeat;
-    
-    
-
+    background-position: center;
+    /* background-repeat: no-repeat; */
 }
 
 header {
@@ -64,7 +61,6 @@ header {
 }
 
 .game-area {
-    width: 79%;
     height: 80%;
     margin: 0;
     font-size: 0;
@@ -74,8 +70,7 @@ header {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    width: 20%;
-    max-width: 210px;
+    
 }
 .reset > div {
     position: relative;
@@ -83,9 +78,9 @@ header {
     margin: 0;
     text-align: center;
     border: 1px black solid;
-    margin: 4%;
     border-radius: 4px;
     background-color: aliceblue;
+    max-width: 210px;
 }
 .card {
     width: 15%;
@@ -97,58 +92,75 @@ header {
 
 }
 .card > * {
-    width: 80%;
-    height: 80%;
-
+    width: 90%;
+    height: 90%;
     position: absolute;
     left: 10%;
     top: 5%;
-
-}
-.front{
+}  
+.front {
     background-size: 100% 100%;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
+    background-color: cadetblue;
+    background-position-y: center;
+    background-size: contain;
 }
 .front1{
-    background-image: url("images/1.png");
+    background-image: url("images/sushi1.png");
 
 }
 .front2{
-    background-image: url("images/2.jpg");
+    background-image: url("images/sushi2.png");
 
 }
 .front3{
-    background-image: url("images/3.jpg");
+    background-image: url("images/sushi3.png");
 
 }
 .front4{
-    background-image: url("images/4.jpg");
+    background-image: url("images/sushi4.png");
 }
 .front5{
-    background-image: url("images/5.jpg");
+    background-image: url("images/sushi5.png");
 }
 .front6{
-    background-image: url("images/6.jpeg");
+    background-image: url("images/sushi6.png");
 }
 .front7{
-    background-image: url("images/7.jpg");
+    background-image: url("images/sushi7.png");
 }
 .front8{
-    background-image: url("images/8.png");
+    background-image: url("images/sushi8.png");
 }
 .front9{
-    background-image: url("images/9.jpg");
+    background-image: url("images/sushi9.png");
 }
 .back {
-    background-image: url("images/lorax-back.jpg");
-    background-size: 100% 100%;
-    background-repeat:no-repeat;
-
-
+    background-image: url(images/drSeussLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #54c5c5;
+    background-position-y: center;
 }
-.hide .back {
+ .hideCard .back {
     display: none;
+} 
+.hidingCard{
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+     -ms-transition: opacity 0.5s ease-in;
+      -o-transition: opacity 0.5s ease-in;
+         transition: opacity 0.5s ease-in;
+    opacity: 0;
+     position: absolute;
+    box-sizing: border-box;
 }
+
+
+
+
+
+
 
 
 .win-modal {
@@ -220,18 +232,15 @@ header {
         height:80%;
     }
     .game-area {
-        width: 80%;
         height: 100%;
         margin: 0;
         font-size: 0;
         display: inline-block;
-        position: relative;
-        left: 20%;
+        padding:0;
     }
     body {
-        background-repeat: repeat;
-        background-size: auto;
-
+        /* background-repeat: repeat; */
+        /* background-size: auto; */
     }
     .win-modal {
         position: absolute;
