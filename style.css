@@ -182,25 +182,32 @@ header {
     display: none;
 }
 .trophy {
-    height: 52%;
+    height: 100%;
     width: 100%;
-    background-image: url(images/modal_Win_img.jpg);
+    background-image: url(images/sushiWinModal.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     margin: auto;
-    margin-top: 14%;
+    /* margin-top: 14%; */
+    /* vertical-align: middle; */
+    /* padding-top: 33%; */
+    /* vertical-align: middle; */
+    display: flex;
+    /* display: table-cell; */
 }
 .modalTextWinning {
     text-align: center;
-    padding-top: 11%;
-    padding-bottom: 6%;
-    font-size: 2rem;
+    /* padding-top: 27%; */
+    /* padding-bottom: 6%; */
+    font-size: 2.5rem;
+    /* vertical-align: middle; */
+    /* vertical-align: middle; */
+    /* display: table-cell; */
+    margin: auto;
 }
 .playAgain{
-    text-align: center;
-    padding: 0%;
-    font-size: 2rem;
+    border: solid 2px black;
 }
 
 .hidden {
@@ -250,19 +257,24 @@ header {
         width: 100%;
     }
     .trophy {
-        height: 23%;
+        height: 100%;
         width: 100%;
-        background-image: url(images/modal_Win_img.jpg);
+        background-image: url(images/sushiWinModal.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         margin: auto;
-        margin-top: 68%;
+        /* margin-top: 35%; */
     }
     .modalTextWinning {
         text-align: center;
-        padding: 18%;
-        font-size: 1rem;
+        /* padding: 25%; */
+        font-size: 1.9rem;
+        margin:auto;
+    }
+    .playAgain {
+        text-align: center;
+
     }
 
     .card {
