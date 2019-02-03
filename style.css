@@ -195,7 +195,19 @@ header {
 
 
 
-
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+.modal-backdrop.in {
+    opacity: .5;
+    
+}
 
 .win-modal {
     position: absolute;
@@ -203,7 +215,7 @@ header {
     /* left: 33%; */
     height: 100%;
     width: 100%;
-    z-index: 7;
+    z-index: 1050;
     opacity: 1;
     /* text-align: center; */
     /* text-align: center; */
@@ -237,11 +249,13 @@ header {
     /* vertical-align: middle; */
     /* display: table-cell; */
     margin: auto;
+    color: white;
     font-family: 'Teko', sans-serif;
 }
 .playAgain{
     border: solid 2px black;
     background-color: lightgray;
+    font-size: 3rem;
 }
 
 .hidden {
@@ -306,8 +320,13 @@ header {
         font-size: 1.9rem;
         margin:auto;
     }
+    .textWrapperModal{
+        margin: auto;
+        display:block;
+    }
     .playAgain {
         text-align: center;
+        font-size: 3rem;
 
     }
 
