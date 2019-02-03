@@ -164,6 +164,7 @@ function reset_stats(){
 }
 
 function hideWinModal(){
+    $('.modal-backdrop').addClass('displaynone')
     $('.win-modal').removeClass('show');
     $('.modal-background').removeClass('show2');
     $('.modal-background').addClass('hidden2');
@@ -171,6 +172,7 @@ function hideWinModal(){
 }
 
 function showWinModal(){
+    $('.modal-backdrop').removeClass('displaynone')
     $('.modal-background').removeClass('hidden2 displaynone');
     $('.win-modal').removeClass('hidden displaynone')
     $('.modal-background').addClass('show2');
