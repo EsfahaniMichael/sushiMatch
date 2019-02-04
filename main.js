@@ -98,6 +98,8 @@ if($(event.currentTarget).hasClass('cantClick')){
                accuracy = matches / attempts;
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
                doNotFlipCards();
+               $(first_card_clicked).find('.front').addClass("wrongMatch");
+               $(second_card_clicked).find('.front').addClass("wrongMatch");
                setTimeout(removeClassHide, 1000);
               setTimeout(reFlipCards, 1300);
 
@@ -120,6 +122,8 @@ function hideFullCard(e){
 function removeClassHide(){
     $(first_card_clicked).removeClass('hideCard cantClick');
     $(second_card_clicked).removeClass('hideCard cantClick');
+    $(first_card_clicked).find('.front').removeClass("wrongMatch");
+    $(second_card_clicked).find('.front').removeClass("wrongMatch");
     first_card_clicked = null;
     second_card_clicked = null;
 }

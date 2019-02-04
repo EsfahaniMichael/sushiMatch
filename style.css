@@ -152,7 +152,11 @@ header {
     background-color: #ccc;
     background-position-y: center;
 }
+
 .back:hover{
+    background-color: cadetblue;
+}
+ .wrongMatch{
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -174,7 +178,7 @@ header {
     40%, 60% {
       transform: translate3d(4px, 0, 0);
     }
-  }
+  } 
 
  .hideCard .back {
     display: none;
@@ -252,10 +256,16 @@ header {
     color: white;
     font-family: 'Teko', sans-serif;
 }
-.playAgain{
-    border: solid 2px black;
-    background-color: lightgray;
+.playAgain {
+    /* border: solid 2px black; */
+    /* background-color: lightgray; */
     font-size: 3rem;
+    text-shadow: 0 0 7px black;
+    font-weight: 600;
+    color: white;
+}
+.playAgain:hover{
+    border-bottom: 3px solid white;
 }
 
 .hidden {
