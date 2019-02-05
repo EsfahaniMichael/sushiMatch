@@ -334,8 +334,8 @@ header {
         padding:0;
     }
     .statsContainer{
-        max-height: 157px;
-        height: 30%;
+        max-height: 175px;
+        height: 40%;
     }
     .games-played{
         flex:none;
@@ -404,5 +404,25 @@ header {
     }
     
 }
+@media screen and (min-width: 321px) and (max-width: 1000px) and (orientation: landscape){
+   .statsContainer{ 
+    height: 62%;
+    background-color: lightgray;
+    border-radius: 10%;
+    margin-top: 10px;
+    max-height: 200px;
+    }
+}
+/* @media only screen and (min-width : 321px) {
+    .statsContainer{ 
+        height: 48%;
+        background-color: lightgray;
+        border-radius: 10%;
+        margin-top: 10px;
+        max-height: 186px;
+        }
+    } */
+    
+
 
 
