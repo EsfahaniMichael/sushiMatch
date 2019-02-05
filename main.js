@@ -32,7 +32,7 @@ function createCards(secondClassList){
         for (var ccIndex = 0; ccIndex < 18; ccIndex++) {
             var cardBig = $('<div>').addClass('card');
             var frontCard = $('<div>').addClass('front ' + secondClassList[ccIndex] + '');           
-            var backCard = $('<div>').addClass('back');
+            var backCard = $('<div>').addClass('back cursorPointer');
             cardBig.append(frontCard);
             cardBig.append(backCard);
             $('.game-area').append(cardBig);
