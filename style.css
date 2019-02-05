@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+}
+@font-face {
+    font-family: fontSushi;
+    src: url(fonts/Korean_Calligraphy.ttf);
+  }
+
+.sushiHeader{
+    
+    text-align: center;
+    font-weight: 600;
+    font-size: 6rem;
+    color: seashell;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-family: fontSushi;
+    letter-spacing: 12px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+  }
+
+  body {
+    /* width: 100vw; */
+    /* height: 100vh; */
+    background-image: url(images/japan_background.png);
+    /* background-size: 100% 100%; */
+    background-repeat: no-repeat;
+}
+.cursorPointer{
+    cursor: pointer;
+}
+
+header {
+    height: 20%;
+
+}
+.header > *{
+    font-size: 1rem;
+    margin: 0;
+    display: inline-block;
+
+}
+.container1 {
+    margin: 0;
+    display: inline-block;
+}
+
+.statsContainer {
+    height:39%;
+    background-color: lightgray;
+    border-radius: 10%;
+    margin-top: 10px;
+    max-height: 180px;
+}
+
+.games-played{
+    flex:auto;
+    text-align: center;
+}
+.accuracy{
+    flex:auto;
+    text-align: center;
+}
+.attempts{
+    flex:auto;
+    text-align: center;
+}
+.label{
+    color: seashell;
+    font-weight: 600;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-size: 2rem;
+    
+}
+.attempts > *{
+    color: seashell;
+    font-weight: 600;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-size: 2rem;
+   
+}
+.accuracy > * {
+    color: seashell;
+    font-weight: 600;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-size: 2rem;
+    
+}
+.games-played > *{
+    color: seashell;
+    font-weight: 600;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-size: 2rem;
+    
+}
+
+.game-area {
+    height: 80%;
+    margin: 0;
+    font-size: 0;
+    display: inline-block;
+}
+.reset {    
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    display: flex;
+}   
+.reset > div {
+    
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 4px;
+    background-color: aliceblue;
+    max-width: 210px;
+}
+.card {
+    width: 15%;
+    height: 30%;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+
+
+}
+.card > * {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}  
+.front {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #ccc;
+    background-position-y: center;
+    background-size: contain;
+    box-shadow: 5px 10px 10px #888888;
+}
+.front1{
+    background-image: url("images/sushi1.png");
+
+}
+.front2{
+    background-image: url("images/sushi2.png");
+
+}
+.front3{
+    background-image: url("images/sushi3.png");
+
+}
+.front4{
+    background-image: url("images/sushi4.png");
+}
+.front5{
+    background-image: url("images/sushi5.png");
+}
+.front6{
+    background-image: url("images/sushi6.png");
+}
+.front7{
+    background-image: url("images/sushi7.png");
+}
+.front8{
+    background-image: url("images/sushi8.png");
+}
+.front9{
+    background-image: url("images/sushi9.png");
+}
+.back {
+    background-image: url(images/chopsticks.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ccc;
+    background-position-y: center;
+}
+
+.back:hover{
+    background-color: #DC3611;
+}
+ .wrongMatch{
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  } 
+
+ .hideCard .back {
+    display: none;
+} 
+.hidingCard{
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+     -ms-transition: opacity 0.5s ease-in;
+      -o-transition: opacity 0.5s ease-in;
+         transition: opacity 0.5s ease-in;
+    opacity: 0;
+     position: absolute;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+.modal-backdrop.in {
+    opacity: .5;
+    
+}
+
+.win-modal {
+    position: absolute;
+    /* top: 6%; */
+    /* left: 33%; */
+    height: 100%;
+    width: 100%;
+    z-index: 1050;
+    opacity: 1;
+    /* text-align: center; */
+    /* text-align: center; */
+    /* margin: auto; */
+    /* justify-content: center; */
+}
+.displaynone{
+    display: none;
+}
+.trophy {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/sushiWinModal.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+    /* margin-top: 14%; */
+    /* vertical-align: middle; */
+    /* padding-top: 33%; */
+    /* vertical-align: middle; */
+    display: flex;
+    /* display: table-cell; */
+}
+.modalTextWinning {
+    text-align: center;
+    /* padding-top: 27%; */
+    /* padding-bottom: 6%; */
+    font-size: 3rem;
+    /* vertical-align: middle; */
+    /* vertical-align: middle; */
+    /* display: table-cell; */
+    margin: auto;
+    color: white;
+    font-family: 'Teko', sans-serif;
+}
+.playAgain {
+    /* border: solid 2px black; */
+    /* background-color: lightgray; */
+    font-size: 3rem;
+    text-shadow: 0 0 7px black;
+    font-weight: 600;
+    color: white;
+}
+.playAgain:hover{
+    border-bottom: 3px solid white;
+}
+
+.hidden {
+    opacity: 0;
+    animation: .6s fadeout linear 0s 1;
+    z-index: -1;
+}.hidden2 {
+    opacity: 0;
+    animation: .6s fadeout2 linear 0s 1;
+    z-index: -1;
+}
+.show {
+    opacity: 1;
+    animation: .6s fadein linear 0s 1;
+}
+.show2 {
+    opacity: .8;
+    animation: .6s fadein2 linear 0s 1;
+}
+
+@media screen and (orientation: portrait){
+    .sushiHeader{
+        display: none;
+    }
+    .statsContainer > * {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    header {
+        height: 10%;
+    }
+    .divAboveRow{
+        height:80%;
+    }
+    .game-area {
+        height: 100%;
+        margin: 0;
+        font-size: 0;
+        display: inline-block;
+        padding:0;
+    }
+    .statsContainer{
+        max-height: 175px;
+        height: 40%;
+    }
+    .games-played{
+        flex:none;
+        text-align: none;
+    }
+    .attempts > *{
+        font-size: 1.5rem;
+    }
+    .games-played > *{
+        font-size: 1.5rem;
+    }
+    .accuracy > *{
+        font-size: 1.5rem;
+    }
+    body {
+        /* background-repeat: repeat; */
+        /* background-size: auto; */
+    }
+    .win-modal {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    .trophy {
+        height: 100%;
+        width: 100%;
+        background-image: url(images/sushiWinModal.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin: auto;
+        /* margin-top: 35%; */
+    }
+    .modalTextWinning {
+        text-align: center;
+        /* padding: 25%; */
+        font-size: 1.9rem;
+        margin:auto;
+    }
+    .textWrapperModal{
+        margin: auto;
+        display:block;
+    }
+    .playAgain {
+        text-align: center;
+        font-size: 3rem;
+
+    }
+
+    .card {
+        width: 26%;
+        height: 17%;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+    }
+    .label{
+        display: block;
+        padding: 0;
+        border-radius: .25em;
+        font-size: 1.5rem;
+        white-space: unset;
+    }
+    .reset{
+        font-size:1.7rem;
+    }
+    
+}
+@media screen and (min-width: 321px) and (max-width: 1000px) and (orientation: landscape){
+   .statsContainer{ 
+    height: 62%;
+    background-color: lightgray;
+    border-radius: 10%;
+    margin-top: 10px;
+    max-height: 200px;
+    }
+}
+/* @media only screen and (min-width : 321px) {
+    .statsContainer{ 
+        height: 48%;
+        background-color: lightgray;
+        border-radius: 10%;
+        margin-top: 10px;
+        max-height: 186px;
+        }
+    } */
+    
+
+
+
