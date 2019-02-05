@@ -1,13 +1,34 @@
 * {
     margin: 0;
 }
-body {
+@font-face {
+    font-family: fontSushi;
+    src: url(fonts/Korean_Calligraphy.ttf);
+  }
+
+.sushiHeader{
+    
+    text-align: center;
+    font-weight: 600;
+    font-size: 6rem;
+    color: seashell;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-family: fontSushi;
+    letter-spacing: 12px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+  }
+
+  body {
     /* width: 100vw; */
     /* height: 100vh; */
     background-image: url(images/japan_background.png);
     /* background-size: 100% 100%; */
-    background-position: center;
     background-repeat: no-repeat;
+}
+.cursorPointer{
+    cursor: pointer;
 }
 
 header {
@@ -26,46 +47,52 @@ header {
 }
 
 .statsContainer {
-    display: inline-block;
-    width: 100%;
-    height: 74%;
-    margin: 0;
-    vertical-align: top;
-    text-align: center;
-    background-color: lightgrey;
-    display:flex;
-    font-family: 'Teko', sans-serif;
-    color: black;
+    height:39%;
+    background-color: lightgray;
+    border-radius: 10%;
+    margin-top: 10px;
+    max-height: 180px;
 }
-.statsContainer > *{
-    display: inline-block;
-}
+
 .games-played{
     flex:auto;
+    text-align: center;
 }
 .accuracy{
     flex:auto;
+    text-align: center;
 }
 .attempts{
     flex:auto;
+    text-align: center;
 }
 .label{
-    color:black;
+    color: seashell;
+    font-weight: 600;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-size: 2rem;
+    
 }
 .attempts > *{
-    display: inline-block;
-    font-size: 2.3rem;
-    margin-top: 5%;
+    color: seashell;
+    font-weight: 600;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-size: 2rem;
+   
 }
 .accuracy > * {
-    display: inline-block;
-    font-size: 2.3rem;
-    margin-top: 5%;
+    color: seashell;
+    font-weight: 600;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-size: 2rem;
+    
 }
 .games-played > *{
-    display: inline-block;
-    font-size: 2.3rem;
-    margin-top: 5%;
+    color: seashell;
+    font-weight: 600;
+    text-shadow: 0 0 5px black, 6px 4px 7px black;
+    font-size: 2rem;
+    
 }
 
 .game-area {
@@ -74,17 +101,15 @@ header {
     font-size: 0;
     display: inline-block;
 }
-.reset {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
+.reset {    
     font-family: 'Teko', sans-serif;
     font-size: 2rem;
+    display: flex;
 }   
 .reset > div {
-    position: relative;
+    
     width: 100%;
-    margin: 0;
+    margin: auto;
     text-align: center;
     border: 1px black solid;
     border-radius: 4px;
@@ -154,7 +179,7 @@ header {
 }
 
 .back:hover{
-    background-color: cadetblue;
+    background-color: #DC3611;
 }
  .wrongMatch{
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -287,6 +312,9 @@ header {
 }
 
 @media screen and (orientation: portrait){
+    .sushiHeader{
+        display: none;
+    }
     .statsContainer > * {
         position: relative;
         left: 0;
@@ -304,6 +332,23 @@ header {
         font-size: 0;
         display: inline-block;
         padding:0;
+    }
+    .statsContainer{
+        max-height: 157px;
+        height: 30%;
+    }
+    .games-played{
+        flex:none;
+        text-align: none;
+    }
+    .attempts > *{
+        font-size: 1.5rem;
+    }
+    .games-played > *{
+        font-size: 1.5rem;
+    }
+    .accuracy > *{
+        font-size: 1.5rem;
     }
     body {
         /* background-repeat: repeat; */
@@ -347,6 +392,17 @@ header {
         display: inline-block;
         margin: 0;
     }
+    .label{
+        display: block;
+        padding: 0;
+        border-radius: .25em;
+        font-size: 1.5rem;
+        white-space: unset;
+    }
+    .reset{
+        font-size:1.7rem;
+    }
+    
 }
 
 
