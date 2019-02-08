@@ -221,7 +221,11 @@ header {
      position: absolute;
     box-sizing: border-box;
 }
-
+.textWrapperModal{ 
+        margin: auto;
+        position: relative;
+        transform: translateY(92%);
+}
 .modal-backdrop {
     position: fixed;
     top: 0;
@@ -268,9 +272,19 @@ header {
     text-shadow: 0 0 7px black;
     font-weight: 600;
     color: white;
+    text-decoration: none;
+    outline: 0;
+    color: white;
+    border-bottom: solid 4px transparent;
+    -webkit-transition: color .2s ease-out, border-bottom-color .2s ease-out;
+        -moz-transition: color .2s ease-out, border-bottom-color .2s ease-out;
+        -ms-transition: color .2s ease-out, border-bottom-color .2s ease-out;
+        -o-transition: color .2s ease-out, border-bottom-color .2s ease-out;
+            transition: color .2s ease-out, border-bottom-color .2s ease-out;
 }
 .playAgain:hover{
-    border-bottom: 3px solid white;
+    color: white;
+    border-bottom: solid 4px white;;
 }
 
 .hidden {
@@ -363,6 +377,8 @@ header {
     .textWrapperModal{
         margin: auto;
         display:block;
+        position: relative;
+        transform: translateY(61%);
     }
     .playAgain {
         text-align: center;
@@ -445,6 +461,9 @@ header {
     #idForRow{
         margin-left: 0;
         margin-right: 0;
+    }
+    .textWrapperModal{
+        transform: translateY(42%);
     }
 }
    
