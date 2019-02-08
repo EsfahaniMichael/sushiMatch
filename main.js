@@ -10,7 +10,7 @@ var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
-
+var touched = 0;
 
 function makeCardArray(){
     var classList = [];
@@ -52,12 +52,12 @@ function addClickHandler(){
     $('.card').on("click", card_clicked);
     $('.resetButton').on("click", reset_clicked);
     $('.playAgain').on("click", reset_clicked);
-    // $(".playagain").on('click', playAgain);
 }
 function card_clicked(){
-if($(event.currentTarget).hasClass('cantClick')){
-    return;
-}
+    touched++;
+    if($(event.currentTarget).hasClass('cantClick')){
+        return;
+    }   
    if (first_card_clicked === null){
       first_card_clicked = event.currentTarget;
       addClassHide(first_card_clicked);
@@ -86,7 +86,7 @@ if($(event.currentTarget).hasClass('cantClick')){
                accuracy = matches / attempts;
                $('.accuracy .value').text(Math.floor(accuracy.toFixed(2) * 100) + "%");
                if (matches === total_possible_matches) {
-                showWinModal();
+                setTimeout(showWinModal, 1000);
                 return;
                }
                else {
@@ -137,7 +137,9 @@ function reFlipCards(){
 }
 
 function reset_clicked(){
-    games_played++;
+    if(touched > 0){
+        games_played++;
+    }
     reset_stats();
     display_stats();
     $('.card').remove();
@@ -146,7 +148,7 @@ function reset_clicked(){
     first_card_clicked = null;
     second_card_clicked = null;
     hideWinModal();
-
+    touched = null;
 }
 
 
